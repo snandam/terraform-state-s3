@@ -1,6 +1,5 @@
 ## Create an s3 bucket to store terraform configs.
 
-- You can do this step manually as well as use terraform to do this.
 - Note: You won't be able to run terraform destroy on this as the state file is stored on the same bucket
 - Update values in terraform.tfvars
 
