@@ -20,7 +20,7 @@ output "terraform_bucket_id" {
 ```
 
 - Now that you have the bucket created, update terraform to use s3 bucket as source to store the state file by running the init.sh script
-- Update init.sh if you have to with your bucket name
+- Update init.sh if you have to, with your bucket name
 
 ```sh
 chmod +x init.sh
