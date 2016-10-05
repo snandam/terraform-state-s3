@@ -9,7 +9,17 @@ terraform plan
 terraform apply
 
 ```
-- Now that you have the bucket created, upload the terraform.tfstate to the s3 bucket that you created.
+
+- Note: You will have to create an output variable of those that you need to use later
+
+```sh
+
+output "terraform_bucket_id" {
+  value = "${aws_s3_bucket.terraform_config.id}"
+}
+```
+
+- Now that you have the bucket created, update terraform to use s3 bucket as source to store the state file by running the init.sh script
 - Update init.sh if you have to with your bucket name
 
 ```sh
