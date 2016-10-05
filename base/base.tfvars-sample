@@ -1,0 +1,7 @@
+aws_region = "us-east-1"
+aws_access_key = ""
+aws_secret_key = ""
+owner = ""
+application = "terraform-s3-087"
+init_state_file = "init/init.tfstate"
+base_state_file = "base/base.tfstate"
