@@ -25,7 +25,7 @@ chmod +x init.sh
 
 - This is incredibly useful while building different environments of your infrastructure.
 - You can update individual environments without the risk of inadvertently affecting something else
-- base.tf created an s3 object. Bucket name is obtained from the init.tfstate file
+- base.tf creates an s3 object. Bucket name is obtained from the init.tfstate file
 
 
 ```sh
