@@ -1,6 +1,11 @@
+## Goal
+
+- Store the tfstate files in s3 (versioned) so it's easy for collaboration and don't have to checkin the file in source control.
+- Maintain separate tfstate files for each layer of the infrastructure as desired.
+
 ## Create an s3 bucket to store terraform configs.
 
-- Note: You won't be able to run terraform destroy on this as the state file is stored on the same bucket
+
 - Update values in terraform.tfvars
 
 ```sh
@@ -9,8 +14,8 @@ terraform plan
 terraform apply
 
 ```
-
-- Note: You will have to create an output variable of those that you need to use later
+- Note: You won't be able to run terraform destroy on this as the state file is stored on the same bucket
+- You will have to create an output variable of those that you need to use later
 
 ```sh
 
@@ -44,3 +49,9 @@ chmod +x init.sh
 terraform plan -var-file=./base.tfvars
 terraform apply -var-file=./base.tfvars
 ```
+
+#### References:
+https://www.terraform.io/docs/state/remote/s3.html
+https://www.terraform.io/intro/getting-started/outputs.html
+https://www.terraform.io/docs/commands/remote-config.html
+https://charity.wtf/2016/03/30/terraform-vpc-and-why-you-want-a-tfstate-file-per-env/
